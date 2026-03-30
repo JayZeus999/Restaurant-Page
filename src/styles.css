@@ -1,4 +1,18 @@
 /* styles.css */
+
 body {
-  background-color: rebeccapurple;
+    background-color: #0f0f0f;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    font-family: serif;
+}
+
+#content {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+img {
+    width: 100%;
 }
