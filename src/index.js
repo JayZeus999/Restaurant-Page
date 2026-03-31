@@ -5,4 +5,4 @@ import { container } from "./content";
 import { headline } from "./content";
 import { tagline } from "./content";
 import { luxuryImg } from "./content";
-
+import { reserveBtn } from "./content";
