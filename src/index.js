@@ -1,5 +1,8 @@
 // src/index.js
 import "./styles.css";
 
-// console.log("What's up?");
-// alert("For all the dogs");
+import { container } from "./content";
+import { headline } from "./content";
+import { tagline } from "./content";
+import { luxuryImg } from "./content";
+
