@@ -13,10 +13,10 @@ tagline.classList.add("classy-text")
 tagline.textContent = " Rare Obsidian Luxury ";
 container.appendChild(tagline);
 
-const description = document.createElement("p");
-description.classList.add("description")
-description.textContent = "An intimate evening of rare flavors and obsidian elegance overlooking the city.";
-container.appendChild(description);
+// const subtitle = document.createElement("p");
+// subtitle.classList.add("description")
+// subtitle.textContent = "Where the night reveals its finest secrets.";
+// container.appendChild(subtitle);
 
 // const luxuryImg = document.createElement("img");
 // luxuryImg.src = luxuryImgSrc;
@@ -25,8 +25,8 @@ container.appendChild(description);
 
 const reserveBtn = document.createElement("button")
 reserveBtn.classList.add("reserveBtn");
-reserveBtn.textContent = "Book Your Experience";
-// container.appendChild(reserveBtn);
+reserveBtn.textContent = "Reserve Your Table";
+container.appendChild(reserveBtn);
 
 export {container, headline, tagline}
-export {description, reserveBtn}
+export {reserveBtn}
