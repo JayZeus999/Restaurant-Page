@@ -1,6 +1,10 @@
 // src/index.js
+
 import "./styles.css";
 
-import { loadHome } from "./home.js";
+import { clearHome, loadHome } from "./home.js";
 
-loadHome();
+const homeBtn = document.querySelector(".home-btn");
+homeBtn.addEventListener("click",() => {
+    loadHome();
+});
