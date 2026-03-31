@@ -15,7 +15,7 @@ body {
     background-position: center; */
     font-family: serif;
 
-    background: url('../luxury-diner.png') center/cover no-repeat fixed;
+    background: url('../images/luxury-diner.png') center/cover no-repeat fixed;
 
     min-height: 100vh;
 }
