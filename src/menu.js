@@ -24,44 +24,44 @@ function loadMenu() {
     container.innerHTML = "";
 
     // Signature Selections
-    const menuTab1 = document.createElement("section");
-    menuTab1.classList.add("heading");
+    // const menuTab1 = document.createElement("section");
+    // menuTab1.classList.add("menu-section");
 
-    const menuTab1Header = document.createElement("h1");
-    menuTab1Header.classList.add("sign-header");
-    menuTab1Header.textContent = "Signature Selections";
+    // const menuTab1Header = document.createElement("h1");
+    // menuTab1Header.classList.add("sign-header");
+    // menuTab1Header.textContent = "Signature Selections";
 
-    // Starters
-    const menuTab2 = document.createElement("section");
-    menuTab2.classList.add("heading");
+    // // Starters
+    // const menuTab2 = document.createElement("section");
+    // menuTab2.classList.add("menu-section");
 
-    const starters = document.createElement("h1");
-    starters.classList.add("sign-header");
-    starters.textContent = "Starters";
+    // const starters = document.createElement("h1");
+    // starters.classList.add("sign-header");
+    // starters.textContent = "Starters";
 
-    // Main Courses
-    const menuTab3 = document.createElement("section");
-    menuTab3.classList.add("heading");
+    // // Main Courses
+    // const menuTab3 = document.createElement("section");
+    // menuTab3.classList.add("menu-section");
 
-    const mainCourses = document.createElement("h1");
-    mainCourses.classList.add("sign-header");
-    mainCourses.textContent = "Main Courses";
+    // const mainCourses = document.createElement("h1");
+    // mainCourses.classList.add("sign-header");
+    // mainCourses.textContent = "Main Courses";
 
-    // Desserts
-    const menuTab4 = document.createElement("section");
-    menuTab4.classList.add("heading");
+    // // Desserts
+    // const menuTab4 = document.createElement("section");
+    // menuTab4.classList.add("menu-section");
 
-    const desserts = document.createElement("h1");
-    desserts.classList.add("sign-header");
-    desserts.textContent = "Desserts";
+    // const desserts = document.createElement("h1");
+    // desserts.classList.add("sign-header");
+    // desserts.textContent = "Desserts";
 
-    // Drinks
-    const menuTab5 = document.createElement("section");
-    menuTab5.classList.add("heading");
+    // // Drinks
+    // const menuTab5 = document.createElement("section");
+    // menuTab5.classList.add("menu-section");
 
-    const drinks = document.createElement("h1");
-    drinks.classList.add("sign-header");
-    drinks.textContent = "Drinks";
+    // const drinks = document.createElement("h1");
+    // drinks.classList.add("sign-header");
+    // drinks.textContent = "Drinks";
 
 
     function createMenuItem(name, price, desc, ImgSrc) {
@@ -72,6 +72,12 @@ function loadMenu() {
         const img = document.createElement("img");
         img.src = ImgSrc;
 
+        const textWrap = document.createElement("div");
+        textWrap.classList.add("menu-text");
+
+        const titleRow = document.createElement("div");
+        titleRow.classList.add("menu-top");
+
         const title = document.createElement("h2");
         title.textContent = name;
 
@@ -81,81 +87,100 @@ function loadMenu() {
         const description = document.createElement("p");
         description.textContent = desc;
 
-        item.appendChild(title);
-        item.appendChild(priceEl);
-        item.appendChild(description);
+        titleRow.appendChild(title);
+        titleRow.appendChild(priceEl);
+
+        textWrap.appendChild(titleRow);
+        textWrap.appendChild(description);
+
         item.appendChild(img);
+        item.appendChild(textWrap);
 
         return item;
     }
 
+    // section-creating function
+    function createSection(titleText, items) {
+        const section = document.createElement("section");
+        section.classList.add("menu-section");
+
+        const header = document.createElement("h1");
+        header.textContent = titleText;
+
+        const grid = document.createElement("div");
+        grid.classList.add("menu-grid");
+
+        items.forEach(
+            item => grid.appendChild(item)
+        );
+
+        section.appendChild(header);
+        section.appendChild(grid);
+
+        return section;
+    }
+
+
     // Signature Selections
-    const item1 = createMenuItem("Velour Steak", "$48", 
-        "Charcoal-seared cut with truffle butter and smoked reduction.", velourImgSrc);
+    const signatureItems = [
 
-    const item2 = createMenuItem("Black Truffle Pasta ", "$36", 
-        "Handmade pasta finished with aged parmesan and shaved truffle.", pastaImgSrc);
+        createMenuItem("Velour Steak", "$48",
+            "Charcoal-seared cut with truffle butter and smoked reduction.", velourImgSrc),
 
-    const item3 = createMenuItem("Château Margaux", "$120", 
-        "A bold, refined red with deep oak and dark fruit notes.", margauxImgSrc);
+        createMenuItem("Black Truffle Pasta ", "$36",
+            "Handmade pasta finished with aged parmesan and shaved truffle.", pastaImgSrc),
+
+        createMenuItem("Château Margaux", "$120",
+            "A bold, refined red with deep oak and dark fruit notes.", margauxImgSrc)];
 
 
     //Starters
-    const item4 = createMenuItem("Oyster Elegance ", "$18", 
-        "Fresh oysters with citrus foam and sea salt mist.", oysterImgSrc);
+    const starterItems = [
+        createMenuItem("Oyster Elegance", "$18",
+            "Fresh oysters with citrus foam and sea salt mist.", oysterImgSrc),
 
-    const item5 = createMenuItem("Golden Burrata", "$16", 
-        "Creamy burrata with heirloom tomatoes and basil oil.", burrataImgSrc);
+        createMenuItem("Golden Burrata", "$16",
+            "Creamy burrata with heirloom tomatoes and basil oil.", burrataImgSrc),
+    ];
 
     // Main Courses
-    const item6 = createMenuItem("Obsidian Filet", "$52", 
-        "Premium beef filet with red wine jus and roasted shallots.", filetImgSrc);
+    const mainItems = [
+        createMenuItem("Obsidian Filet", "$52",
+            "Premium beef filet with red wine jus and roasted shallots.", filetImgSrc),
 
-    const item7 = createMenuItem("Lamb Nocturne", "$46", 
-        "Slow-roasted lamb with herb crust and velvet glaze.", lambImgSrc);
+        createMenuItem("Lamb Nocturne", "$46",
+            "Slow-roasted lamb with herb crust and velvet glaze.", lambImgSrc),
+    ];
 
     // Desserts
-    const item8 = createMenuItem("Midnight Velvet", "$14", 
-        "Dark Chocolate Crémeux Bar with Cocoa Soil & Gold Leaf.", velvetImgSrc);
+    const dessertItems = [
+        createMenuItem("Midnight Velvet", "$14",
+            "Dark Chocolate Crémeux Bar with Cocoa Soil & Gold Leaf.", velvetImgSrc),
 
-    const item9 = createMenuItem("Vanilla Eclipse", "$12", 
-        "Silky vanilla bean panna cotta with berry reduction.", vanillaImgSrc);
+        createMenuItem("Vanilla Eclipse", "$12",
+            "Silky vanilla bean panna cotta with berry reduction.", vanillaImgSrc),
+    ];
 
     // Drinks
-    const item10 = createMenuItem("Crimson Bloom", "$14", 
-        "Signature cocktail with berry infusion and floral notes.", crimsonImgSrc);
+    const drinkItems = [
+        createMenuItem("Crimson Bloom", "$14",
+            "Signature cocktail with berry infusion and floral notes.", crimsonImgSrc),
 
-    const item11 = createMenuItem("Noir Espresso", "$12", 
-        "Rich espresso with subtle dark chocolate finish.", noirImgSrc);
+        createMenuItem("Noir Espresso", "$12",
+            "Rich espresso with subtle dark chocolate finish.", noirImgSrc),
+    ];
 
-    
-    menuTab1.appendChild(menuTab1Header);
-    menuTab2.appendChild(starters);
-    menuTab3.appendChild(mainCourses);
-    menuTab4.appendChild(desserts);
-    menuTab5.appendChild(drinks);
+    const signatureSection = createSection("Signature Selections", signatureItems);
+    const startersSection = createSection("Starters", starterItems);
+    const mainsSection = createSection("Main Courses", mainItems);
+    const dessertsSection = createSection("Desserts", dessertItems);
+    const drinksSection = createSection("Drinks", drinkItems);
 
-    menuTab1.appendChild(item1);
-    menuTab1.appendChild(item2);
-    menuTab1.appendChild(item3);
-
-    menuTab2.appendChild(item4);
-    menuTab2.appendChild(item5);
-
-    menuTab3.appendChild(item6);
-    menuTab3.appendChild(item7);
-
-    menuTab4.appendChild(item8);
-    menuTab4.appendChild(item9);
-
-    menuTab5.appendChild(item10);
-    menuTab5.appendChild(item11);
-
-    container.appendChild(menuTab1);
-    container.appendChild(menuTab2);
-    container.appendChild(menuTab3);
-    container.appendChild(menuTab4);
-    container.appendChild(menuTab5);
+    container.appendChild(signatureSection);
+    container.appendChild(startersSection);
+    container.appendChild(mainsSection);
+    container.appendChild(dessertsSection);
+    container.appendChild(drinksSection);
 }
 
 export { loadMenu };
