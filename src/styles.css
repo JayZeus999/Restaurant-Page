@@ -23,7 +23,7 @@ body {
     color: white;
     font-family: var(--font-body);
 
-    background: url('../images/luxury-diner.png') center/cover no-repeat fixed;
+    background: linear-gradient(rgba(5, 8, 20, 0.1), rgba(5, 8, 20, 0.4)), url('../images/luxury-diner.png') center/cover no-repeat fixed;
 
     min-height: 100vh;
 }
@@ -239,6 +239,7 @@ nav button:hover::after {
 .menu-top span {
     color: var(--wine);
     font-weight: 500;
+    font-size: larger;
 }
 
 .menu-text p {
@@ -254,3 +255,51 @@ nav button:hover::after {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
+/* about.js */
+
+.about-wrapper {
+    max-width: 700px;
+    text-align: center;
+    margin-top: 6rem;
+    line-height: 1.7;
+}
+
+.about-hero {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+    color: var(--gold);
+    letter-spacing: 0.1rem;
+}
+
+
+.about-wrapper p {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    opacity: 0.85;
+    margin-bottom: 1.8rem;
+
+    color: white;
+    font-weight: 400;
+}
+
+.about-wrapper .about-signature {
+    font-family: var(--font-display);
+    font-style: italic;
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: #f28995;
+}
+
+.about-wrapper::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 3rem auto 0;
+
+    background: url('../images/black-swan-logo.svg') center/contain no-repeat;
+    opacity: 0.08;
+}

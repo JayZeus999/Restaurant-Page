@@ -1,6 +1,6 @@
 function loadAbout() {
     const container = document.querySelector("#content");
-    
+
     container.innerHTML = "";
 
     const wrapper = document.createElement("div");
@@ -18,7 +18,7 @@ function loadAbout() {
 
     const signature = document.createElement("p");
     signature.classList.add("about-signature");
-    signature.textContent = "Curated under the vision of Chef Alaric Noire.";
+    signature.textContent = "Curated under the vision of Chef Jay Faraday.";
 
     wrapper.appendChild(hero);
     wrapper.appendChild(para1);
