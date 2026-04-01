@@ -23,46 +23,6 @@ function loadMenu() {
 
     container.innerHTML = "";
 
-    // Signature Selections
-    // const menuTab1 = document.createElement("section");
-    // menuTab1.classList.add("menu-section");
-
-    // const menuTab1Header = document.createElement("h1");
-    // menuTab1Header.classList.add("sign-header");
-    // menuTab1Header.textContent = "Signature Selections";
-
-    // // Starters
-    // const menuTab2 = document.createElement("section");
-    // menuTab2.classList.add("menu-section");
-
-    // const starters = document.createElement("h1");
-    // starters.classList.add("sign-header");
-    // starters.textContent = "Starters";
-
-    // // Main Courses
-    // const menuTab3 = document.createElement("section");
-    // menuTab3.classList.add("menu-section");
-
-    // const mainCourses = document.createElement("h1");
-    // mainCourses.classList.add("sign-header");
-    // mainCourses.textContent = "Main Courses";
-
-    // // Desserts
-    // const menuTab4 = document.createElement("section");
-    // menuTab4.classList.add("menu-section");
-
-    // const desserts = document.createElement("h1");
-    // desserts.classList.add("sign-header");
-    // desserts.textContent = "Desserts";
-
-    // // Drinks
-    // const menuTab5 = document.createElement("section");
-    // menuTab5.classList.add("menu-section");
-
-    // const drinks = document.createElement("h1");
-    // drinks.classList.add("sign-header");
-    // drinks.textContent = "Drinks";
-
 
     function createMenuItem(name, price, desc, ImgSrc) {
 
