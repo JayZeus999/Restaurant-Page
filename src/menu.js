@@ -15,30 +15,36 @@ function loadMenu() {
     menuTab1Header.classList.add("sign-header");
     menuTab1Header.textContent = "Signature Selections";
 
-    const velourSteak = document.createElement("div");
-    velourSteak.classList.add("menu-item");
 
-    const velourImg = document.createElement("img");
-    velourImg.src = velourImgSrc;
-    velourImg.alt = "Charcoal-seared cut with truffle butter and smoked reduction.";
+    function createMenuItem(name, price, desc, ImgSrc) {
+
+        const item = document.createElement("div");
+        item.classList.add("menu-item");
+
+        const img = document.createElement("img");
+        img.src = ImgSrc;
+
+        const title = document.createElement("h3");
+        title.textContent = name;
+
+        const priceEl = document.createElement("span");
+        priceEl.textContent = price;
+
+        const description = document.createElement("p");
+        description.textContent = desc;
+
+        item.appendChild(title);
+        item.appendChild(priceEl);
+        item.appendChild(description);
+        item.appendChild(img);
+
+        return item;
+    }
 
 
-    const velourName = document.createElement("span");
-    velourName.classList.add("dish");
-    velourName.textContent = "Velour Steak";
+    const velourSteak = createMenuItem("Velour Steak", "$48", 
+        "Charcoal-seared cut with truffle butter and smoked reduction.", velourImgSrc)
 
-    const velourPrice = document.createElement("span");
-    velourPrice.classList.add("price");
-    velourPrice.textContent = "$48";
-
-    const velourSubtitle = document.createElement("span");
-    velourSubtitle.classList.add("description");
-    velourSubtitle.textContent = "Charcoal-seared cut with truffle butter and smoked reduction.";
-
-    velourSteak.appendChild(velourImg);
-    velourSteak.appendChild(velourName);
-    velourSteak.appendChild(velourPrice);
-    velourSteak.appendChild(velourSubtitle);
 
     menuTab1.appendChild(menuTab1Header);
     menuTab1.appendChild(velourSteak);
