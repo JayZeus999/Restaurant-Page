@@ -12,6 +12,7 @@
     --bg-dark: #0f0f0f;
     --gold: rgb(226, 201, 55);
     --wine: #d84f5f;
+    --soft-ivory: #f8f5f0;
     --overlay: rgba(0, 0, 0, 0.6);
 
     --font-body: "Montserrat", sans-serif;
@@ -276,7 +277,7 @@ nav button:hover::after {
 
 .about-wrapper p {
     font-family: var(--font-body);
-    font-size: 1.2rem;
+    font-size: 1rem;
     opacity: 0.85;
     margin-bottom: 1.8rem;
 
@@ -290,14 +291,14 @@ nav button:hover::after {
     margin-top: 3rem;
     font-size: 1.4rem;
     font-weight: bolder;
-    color: #f28995;
+    color: var(--wine);
 }
 
 .about-wrapper::after {
     content: "";
     display: block;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     margin: 3rem auto 0;
 
     background: url('../images/black-swan-logo.svg') center/contain no-repeat;
@@ -306,3 +307,66 @@ nav button:hover::after {
 
 
 /* contact.js */
+
+.contact-wrapper {
+    max-width: 500px;
+    width: 100%;
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.contact-wrapper h1 {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.contact-wrapper p {
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.contact-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-wrapper input,
+.contact-wrapper textarea {
+    background: transparent;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 0.8rem;
+    color: white;
+    font-family: var(--font-body);
+
+    transition: border 0.3s ease;
+}
+
+.contact-wrapper input:focus,
+.contact-wrapper textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.contact-wrapper ::placeholder {
+    font-weight: 200;   
+    opacity: 1;         
+    color: var(--soft-ivory);     
+}
+
+.contact-wrapper button {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-wrapper button:hover {
+    background: var(--gold);
+    color: black;
+}
