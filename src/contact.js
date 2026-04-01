@@ -2,7 +2,7 @@
 
 function loadContact() {
     const container = document.querySelector("#content");
-    
+
     container.innerHTML = "";
 
     const wrapper = document.createElement("div");
@@ -13,7 +13,7 @@ function loadContact() {
 
     const subtitle = document.createElement("p");
     subtitle.textContent =
-        "An evening at Black Swan Nocturne is by intention, not chance. Kindly leave your details below.";
+        "An evening at Black Swan Nocturne is reserved by intention, not chance. Please share your details below.";
 
     const form = document.createElement("form");
 

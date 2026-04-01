@@ -11,7 +11,7 @@ import filetImgSrc from "../images/obsidian-filet.jpeg"
 import lambImgSrc from "../images/lamb-nocturne.webp"
 
 import velvetImgSrc from "../images/midnight-velvet.jpg"
-import vanillaImgSrc from "../images/lamb-nocturne.webp"
+import vanillaImgSrc from "../images/vanilla-eclipse.jpg"
 
 import crimsonImgSrc from "../images/crimson-bloom.webp"
 import noirImgSrc from "../images/noir-espresso.jpg"

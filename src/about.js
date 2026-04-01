@@ -11,14 +11,14 @@ function loadAbout() {
     hero.textContent = "Where the night reveals its finest secrets.";
 
     const para1 = document.createElement("p");
-    para1.textContent = "At Black Swan Nocturne, dining is not an act — it is a ritual. Each plate is composed with intention, where precision meets quiet indulgence, and every detail exists to elevate the moment beyond the ordinary.";
+    para1.textContent = "Black Swan Nocturne is more than a restaurant — it is a sanctuary of refined indulgence. Every dish is an act of quiet artistry, crafted to awaken the senses and linger in memory long after the evening ends.";
 
     const para2 = document.createElement("p");
-    para2.textContent = "Beneath dimmed lights and whispered conversations, the atmosphere unfolds — intimate, elusive, and timeless. Here, the night lingers just a little longer, and every experience is meant to be remembered, not rushed.";
+    para2.textContent = "In this intimate setting of shadow and light, time yields to pleasure. Here, exceptional ingredients meet masterful technique, creating moments that feel both timeless and deeply personal.";
 
     const signature = document.createElement("p");
     signature.classList.add("about-signature");
-    signature.textContent = "Curated under the vision of Chef Jay Faraday.";
+    signature.textContent = "Curated by Chef Jay Faraday.";
 
     wrapper.appendChild(hero);
     wrapper.appendChild(para1);
