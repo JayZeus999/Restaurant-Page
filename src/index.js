@@ -4,6 +4,7 @@ import "./styles.css";
 
 import { loadHome } from "./home.js";
 import { loadMenu } from "./menu.js"
+import { loadAbout } from "./about.js"; 
 
 const homeBtn = document.querySelector(".home-btn");
 homeBtn.addEventListener("click",() => {
@@ -13,4 +14,9 @@ homeBtn.addEventListener("click",() => {
 const menuBtn = document.querySelector(".menu-btn");
 menuBtn.addEventListener("click",() => {
     loadMenu();
+});
+
+const aboutBtn = document.querySelector(".about-btn");
+aboutBtn.addEventListener("click",() => {
+    loadAbout();
 });
