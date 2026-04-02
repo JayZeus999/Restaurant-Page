@@ -179,7 +179,7 @@ nav button:hover::after {
 }
 
 .menu-section h1 {
-    font-family: var(--font-display); /* 🔹 elegant headers */
+    font-family: var(--font-display); 
     font-weight: 600;
     font-size: 2rem;
     margin-bottom: 2rem;

@@ -26,3 +26,5 @@ const contactBtn = document.querySelector(".contact-btn");
 contactBtn.addEventListener("click",() => {
     loadContact();
 });
+
+loadHome();
