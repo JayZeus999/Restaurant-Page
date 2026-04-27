@@ -11,7 +11,14 @@
     "deploy": "git subtree push --prefix dist origin gh-pages",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "repository": {
     "type": "git",
@@ -31,6 +38,8 @@
     "globals": "^17.5.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.6",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
     "style-loader": "^4.0.0",
     "webpack": "^5.105.4",
     "webpack-cli": "^7.0.2",
